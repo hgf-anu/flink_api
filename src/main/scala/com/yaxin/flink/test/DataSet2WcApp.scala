@@ -1,4 +1,4 @@
-package com.yaxin.flink
+package com.yaxin.flink.test
 
 import org.apache.flink.api.java.utils.ParameterTool
 import org.apache.flink.api.scala.{DataSet, ExecutionEnvironment}
@@ -31,5 +31,6 @@ object DataSet2WcApp{
 		aggSet.writeAsCsv(outputPath).setParallelism(1)
 		//如果是打印等操作不需要执行，如果要写入到文件中需要加入执行
 		env.execute()
+		//./flink run -c com.yaxin.flink.DataSet2WcApp /opt/module/flink-1.7.0/lib/flink1205-1.0-SNAPSHOT.jar --input ~/applog/flink/input.txt --output ~/applog/flink/output2019-11-06.csv
 	}
 }

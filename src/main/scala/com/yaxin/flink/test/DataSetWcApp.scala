@@ -1,4 +1,4 @@
-package com.yaxin.flink
+package com.yaxin.flink.test
 
 import org.apache.flink.api.scala.{DataSet, ExecutionEnvironment}
 
